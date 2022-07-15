@@ -6,9 +6,10 @@ const flightSchema = new Schema({
     airline: String,
     airport: String,
     flightNo: Number,
-    departs: function () {
-        return new Date().getFullYear();
-    }
+    departs: Date
+    // departs: function () {
+    //     return new Date().getFullYear();
+    
   });
 
 module.exports = mongoose.model('Flight', flightSchema);
