@@ -3,10 +3,14 @@
 <h2>Enter a New Flight</h2>
 <form action="/flights" method="POST">
   <label>Airline:
-    <input type="text" name="airline">
+    <select type="text" name="airline">
   </label><br>
-  <label>Airport:
-    <input type="text" name="airport">
+  <label>Airport
+    <select name="Airport">
+      <option value="LAX" selected>LAX</option>
+      <option value="DEN" selected>DEN</option>
+      <option value="BWI" selected>BWI</option>
+      <option value="SAN" selected>SAN</option>
   </label><br>
   <label>Flight Number:
     <input type="number" name="flightNo">
