@@ -10,3 +10,4 @@ const flightSchema = new Schema({
         return new Date().getFullYear();
     }
   });
+
