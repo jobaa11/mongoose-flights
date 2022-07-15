@@ -19,5 +19,8 @@ function index (req, res) {
 
 function newFlight(req, res) {
     const newFlight = new Flight();
-    res.render('flight/new');
+    const dt = newFlight.departs;
+    let departsDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
+    departsDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
+    res.render('flight/new', { departsDate });
 }
