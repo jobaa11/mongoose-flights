@@ -1,28 +1,29 @@
 <%- include('../partials/header') %>
-
 <h2>Enter a New Flight</h2>
 <form action="/flights" method="POST">
-  <label>Airline:
-    <select name="airline">
+  <label>Airlines:
+    <select name="Airlines" selected>
       <option value="Delta">Delta</option>
       <option value="United">United</option>
       <option value="American">American</option>
       <option value="Southwest">Southwest</option>
     </select>
   </label><br>
-  <label>Airport:
-    <select name="airport">
-      <option value="LAX" selected>LAX</option>
+  <label>Airport
+    <select name="Airport" selected>
+      <option value="SFO">SFO</option>
       <option value="DEN">DEN</option>
-      <option value="BWI">BWI</option>
-      <option value="SAN">SAN</option>
+      <option value="LAX">LAX</option>
+      <option value="JFK">JFK</option>
+    </select>
   </label><br>
-  <label>Flight Number:
-    <input type="number" name="flightNo">
+  <label>Flight No:
+    <form>
+      <input type="text" required pattern="/^\(\d{3}\)\s\d{3}-\d{4}$/" name="Flight No">
+  </form>
   </label><br>
-  <label>departs
-    <input type="datetime-local" name="departs">
+  <label>Departs:
+    <input type="datetime-local" name="Departs">
   </label><br>
 </form>
-
 <%- include('../partials/footer') %>
