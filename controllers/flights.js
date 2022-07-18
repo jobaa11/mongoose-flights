@@ -3,7 +3,8 @@ const Flight = require('../models/flight');
 module.exports = {
     index,
     new: newFlight,
-    show
+    show,
+    create
 };
 
 function index(req, res) {
@@ -17,10 +18,17 @@ function show(req, res) {
 });
 }
 
+function create(req, res) {
+    const flight = new Flight(req.body);
+  flight.save(function(err) {
+    // one way to handle errors
+    if (err) return res.redirect('/flights/new');
+    console.log(flight);
+    // for now, redirect right back to new.ejs
+    res.redirect('/flights');
+});
+}
+
 function newFlight(req, res) {
-    // const newFlight = new Flight();
-    // const dt = newFlight.departs;
-    // let departsDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
-    // departsDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
     res.render('flights/new');
 }
