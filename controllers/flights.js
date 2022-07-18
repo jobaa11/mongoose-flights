@@ -9,7 +9,7 @@ module.exports = {
 
 function index(req, res) {
     Flight.find({}, function(err, flights) {
-        res.render('flights/index', { title: 'All Flights', flights });
+        res.render('flights/index', { flights });
     });
 }
 function show(req, res) {
@@ -18,17 +18,16 @@ function show(req, res) {
 });
 }
 
+function newFlight(req, res) {
+    res.render('flights/new');
+}
+
 function create(req, res) {
-    const flight = new Flight(req.body);
+    console.log('hello world');
+    var flight = new Flight(req.body);
   flight.save(function(err) {
-    // one way to handle errors
     if (err) return res.redirect('/flights/new');
-    console.log(flight);
-    // for now, redirect right back to new.ejs
     res.redirect('/flights');
 });
 }
 
-function newFlight(req, res) {
-    res.render('flights/new');
-}

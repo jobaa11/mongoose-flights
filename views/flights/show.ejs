@@ -5,11 +5,10 @@
   <div><%= flight.airline %></div>
   <div>Airport: </div>
   <div><%= flight.airport %></div>
-  <div>Rating: </div>
+  <div>Flight Number: </div>
   <div><%= flight.flightNo %></div>
-  <div>Cast: </div>
-  <div><%= flight.cast.join(', ') %></div>
-  <div>Now Showing: </div>
+  <div>Departing: </div>
+  <div>Departs: </div>
   <div><%= flight.departs ? 'Yes' : 'Nope' %></div>
 </section>
 
@@ -17,16 +16,13 @@
 <form id="add-review-form" method="POST"
   action="/flights/<%= flight._id %>/destinations">
   <label>Destination:</label>
-  <textarea name="content"></textarea>
+  <select name="airport">
+    <option value="SFO" selected>SFO</option>
+    <option value="DEN">DEN</option>
+    <option value="LAX">LAX</option>
+    <option value="JFK">JFK</option>
   <label>Rating:</label>
-  <select name="rating">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5" selected>5</option>
-  </select>
-  <input type="submit" value="Add Review">
+  <input type="submit" value="submit">
 </form>
 
 <% if (flight.destinations.length) { %>
