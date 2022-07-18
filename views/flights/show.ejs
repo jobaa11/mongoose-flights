@@ -39,11 +39,11 @@
       </tr>
     </thead>
     <tbody>
-      <% flight.destinations.forEach(function(r) { %>
+      <% flight.destinations.forEach(function(f) { %>
         <tr>
-          <td><%= r.createdAt.toLocaleDateString() %></td>
-          <td><%= r.content %></td>
-          <td><%= r.rating %></td>
+          <td><%= f.createdAt.toLocaleDateString() %></td>
+          <td><%= f.content %></td>
+          <td><%= f.rating %></td>
         </tr>
       <% }); %>
     </tbody>

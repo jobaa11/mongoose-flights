@@ -8,7 +8,7 @@ module.exports = {
 
 function index(req, res) {
     Flight.find({}, function(err, flights) {
-        res.render('flights/index', { flights });
+        res.render('flights/index', { title: 'All Flights', flights });
     });
 }
 function show(req, res) {
