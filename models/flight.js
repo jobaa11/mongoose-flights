@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// optional shortcut variable
 const Schema = mongoose.Schema;
 
 destinationSchema = new Schema ({
@@ -13,11 +12,26 @@ destinationSchema = new Schema ({
 });
 
 const flightSchema = new Schema({
-    airline: String,
-    airport: String,
-    flightNo: Number,
-    departs: Date,
-    destinations: [destinationSchema]
+    airline: {
+      type: String,
+      enum: ['Delta', 'United', 'American', 'Southwest'],
+    },
+    airport: {
+      type: String,
+      enum: ['SFO', 'DEN', 'LAX', 'JFK'],
+      default: 'SFO'
+    },
+    flightNo: {
+      type: Number,
+      required: true,
+      min: 10,
+      max: 999
+    },
+    departs: {
+      type: Date,
+      default: Date.now() + 365*24*60*60000
+    },
+    destinations: [destinationSchema],
   });
 
 module.exports = mongoose.model('Flight', flightSchema);

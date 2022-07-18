@@ -2,7 +2,7 @@
 <h2>Enter a New Flight</h2>
 <form action="/flights" method="POST">
   <label>Airlines:
-    <select name="airlines">
+    <select name="airline">
       <option value="Delta" selected>Delta</option>
       <option value="United">United</option>
       <option value="American">American</option>
@@ -19,11 +19,11 @@
   </label><br>
   <label>Flight No:
     <form>
-      <input type="text" required pattern="[1-9]\d\d" name="Flight No">
+      <input type="number" name="flightNo">
   </form>
   </label><br>
   <label>Departs:
-    <input type="datetime-local" name="Departs">
+    <input type="datetime-local" name="departs">
   </label><br>
   <input type="submit" value="submit">
 </form>
