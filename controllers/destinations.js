@@ -8,6 +8,7 @@ module.exports = {
 // POST /movies/:id/reviews
 
 function create(req, res) {
+    console.log('destinations');
    Flight.findById(req.params.id, function(err, flight) {
     flight.destinations.push(req.body);
     flight.save(function(err) {

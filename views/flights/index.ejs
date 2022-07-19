@@ -2,20 +2,22 @@
 
 <h1>Flight Info</h1>
   <table>
-    <!-- <thead>
+  <thead>
       <tr>
         <th>Airline</th>
         <th>Airport</th>
         <th>Flight Number</th>
-        <th>Departs</th>
+        <th>Depart Time</th>
+        <th>On Time</th>
+        <th>Details</th>
       </tr>
-    </thead> -->
+    </thead>
     <tbody>
 
       <% flights.forEach(function(f) { %>
         <tr>
           <td><%= f.airline %></td>
-          <td><%= f.Airport %></td>
+          <td><%= f.airport %></td>
           <td><%= f.flightNo %></td>
           <td><%= f.departs %></td>
 
