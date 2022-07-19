@@ -108,11 +108,11 @@ nav > a {
   
 /* } */
 
-option {
+/* option {
   padding: 10vmin;
   border: 2vmin solid green;
   border-radius: 4vmin;
-}
+} */
 
 select {
   cursor: pointer;
@@ -120,6 +120,13 @@ select {
   font: normal 11px/22px Arial, Sans-Serif;
   color: black;
   border: 1px solid #ccc;
+}
+
+div {
+  display: grid;
+  grid-template-rows: repeat();
+  justify-content: center;
+  
 }
 
 label {

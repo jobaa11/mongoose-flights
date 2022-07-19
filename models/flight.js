@@ -7,8 +7,9 @@ destinationSchema = new Schema ({
     enum: ['SFO', 'DEN', 'LAX', 'JFK']
   },
   arrival: {
-    type: Date
-  }
+    type: Date,
+    default: Date.now() + 365*24*60*60000
+  },
 });
 
 const flightSchema = new Schema({
