@@ -47,7 +47,6 @@ table td {
 }
 
 
-
 #add-review-form {
   display: grid;
   grid-template-columns: auto auto;
@@ -123,9 +122,8 @@ select {
 }
 
 div {
-  display: grid;
-  grid-template-rows: repeat();
-  justify-content: center;
+  text-align: center;
+  width: 100%;
   
 }
 

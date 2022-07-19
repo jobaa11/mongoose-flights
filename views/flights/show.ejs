@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Airlines: </div>
-  <div><%= flight.airline %></div>
+  <div>Airlines:
+  <div><%= flight.airline %></div> </div>
   <div>Airport: </div>
   <div><%= flight.airport %></div>
   <div>Flight Number: </div>
@@ -13,25 +13,25 @@
 </section>
 
 <br><br><h2>Destinations</h2>
-<form id=“add-destination-form” method=“POST”
-  action=“/destinations/<%= flight._id %>”>
+<form id='add-destination-form' method='POST'
+  action='/destinations/<%= flight._id %>'>
   <label>Destinations:</label><br>
   <label>Airline:</label>
-  <select name=“airline”>
-    <option value=“Delta”>Delta</option>
-    <option value=“United”>United</option>
-    <option value=“American”>American</option>
-    <option value=“Southwest”>Southwest</option>
+  <select name='airline'>
+    <option value='Delta'>Delta</option>
+    <option value='United'>United</option>
+    <option value='American'>American</option>
+    <option value='Southwest'>Southwest</option>
   </select> <br>
   <label>Airport:</label>
-  <select name=“airport”>
-    <option value=“SFO”>SFO</option>
-    <option value=“OAK”>OAK</option>
-    <option value=“LAX”>LAX</option>
-    <option value=“HNL”>HNL</option>
+  <select name='airport'>
+    <option value='SFO'>SFO</option>
+    <option value='OAK'>OAK</option>
+    <option value='LAX'>LAX</option>
+    <option value='HNL'>HNL</option>
   </select><br>
   <label>FlightNo:</label>
-    <input type=“Number” name=“flightNo”>
+    <input type='Number' name='flightNo'>
     <br>
   <label>Arrivals:</label>
     <input type="datetime-local" name="arrival">
@@ -47,7 +47,6 @@
         <th>Airline</th>
         <th>Flight Number</th>
         <th>Arrivals</th>
-
       </tr> 
       </thead> 
     <tbody>
