@@ -46,16 +46,15 @@ table td {
   min-width: 100px;
 }
 
-
-#add-review-form {
+#add-destination-form {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
 }
 
-#add-review-form input[type="submit"] {
+#add-destination-form input[type="submit"] {
   width: 8rem;
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
   margin-bottom: 2rem;
 }
 

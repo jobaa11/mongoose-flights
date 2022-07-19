@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Airlines:
-  <div><%= flight.airline %></div> </div>
+  <div>Airlines: </div>
+  <div><%= flight.airline %></div>
   <div>Airport: </div>
   <div><%= flight.airport %></div>
   <div>Flight Number: </div>
@@ -15,7 +15,6 @@
 <br><br><h2>Destinations</h2>
 <form id='add-destination-form' method='POST'
   action='/destinations/<%= flight._id %>'>
-  <label>Destinations:</label><br>
   <label>Airline:</label>
   <select name='airline'>
     <option value='Delta'>Delta</option>
@@ -26,11 +25,11 @@
   <label>Airport:</label>
   <select name='airport'>
     <option value='SFO'>SFO</option>
-    <option value='OAK'>OAK</option>
+    <option value='DEN'>DEN</option>
     <option value='LAX'>LAX</option>
-    <option value='HNL'>HNL</option>
-  </select><br>
-  <label>FlightNo:</label>
+    <option value='JFK'>JFK</option>
+  </select> <br>
+  <label>Flight Number:</label>
     <input type='Number' name='flightNo'>
     <br>
   <label>Arrivals:</label>
