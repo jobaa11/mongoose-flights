@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Airlines: </div>
+  <div class="params">Airlines: </div>
   <div class="details"><%= flight.airline %></div>
-  <div>Airport: </div>
+  <div class="params">Airport: </div>
   <div class="details"><%= flight.airport %></div>
-  <div>Flight Number: </div>
+  <div class="params">Flight Number: </div>
   <div class="details"><%= flight.flightNo %></div>
-  <div>On time: </div>
+  <div class="params">On time: </div>
   <div class="details"><%= flight.departs ? 'Yes' : 'Nope' %></div>
 </section>
 

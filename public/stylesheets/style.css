@@ -11,8 +11,8 @@ body {
   font-size: large;
   grid-template-rows: 70px 1fr;
   grid-template-areas:
-    "nav"
-    "main"
+  "nav"
+  "main"
 }
 
 body>nav {
@@ -50,6 +50,11 @@ table td {
 
 .details {
   color: gray;
+  /* margin-left: 10vmin; */
+}
+
+.params {
+  font-size: larger;
 }
 
 #add-destination-form {
@@ -143,4 +148,32 @@ th {
   text-align: left;
   padding: 0.5em 1em;
 
+}
+
+#newplane {
+  width: 50%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5vmin;
+}
+
+select {
+  inline-size: 170px;
+  block-size: 3.7vmin;
+  border-radius: 5%;
+}
+label > input {
+  inline-size: 170px;
+  block-size: 3.7vmin;
+  border-radius: 5%;
+}
+
+form > label {
+  font-size: larger;
+}
+
+input {
+  inline-size: 170px;
+  block-size: 3.7vmin;
+  border-radius: 5%;
 }
