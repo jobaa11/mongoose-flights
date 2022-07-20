@@ -76,7 +76,6 @@ body>main {
   align-items: stretch;
   background-color: rgba(120, 137, 156, 0.5);
   padding: 50px;
-  overflow-y: hidden;
 }
 
 main>h1 {

@@ -9,21 +9,7 @@
   <div class="details"><%= flight.flightNo %></div>
   <div class="params">On time: </div>
   <div class="details"><%= flight.departs ? 'Yes' : 'Nope' %></div>
-  <div>Tickets:</div>
-  <ul>
-    <%- flight.ticket.map(t => 
-      `<li>${t.seat} <small>${t.price}</small></li>`
-    ).join('') %>
-  </ul>
-</section>
-<form id="add-per-to-ticket" action="/flights/<%= flight._id %>/tickets" method="POST">
-  <select name="ticketId">
-    <%- tickets.map(p => 
-      `<option value="${t._id}">${t.seat}</option>`
-    ).join('') %>
-  </select>
-  <button type="submit">Add to Flight</button>
-</form>
+
 
 <br><br><h2>Destinations</h2>
 <form id='add-destination-form' method='POST'
@@ -74,5 +60,18 @@
   </table>
 <% } else { %> 
 <% } %>
+
+<section id="badge-container">
+</section>
+
+<h1>Create A Ticket</h1>
+<form id="add-ticket-form" action="/tickets/<%=flight._id%>" method="POST">
+  <label>Seat:</label>
+  <input name="seat" required pattern="[A-F][1-9]\d?">
+  <label>Price:</label>
+  <input type="number" name="price">
+  <input type="submit" value="Add Ticket">
+</form>
+
 
 <%- include('../partials/footer') %>
