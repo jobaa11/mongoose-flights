@@ -1,0 +1,10 @@
+<%- include('../partials/footer') %>
+
+
+<section id="badge-container">
+    <% tickets.forEach(function(t) { %>
+      <article class="badge"><%= t.seat %></article>
+    <% }) %>
+  </section>
+
+  <%- include('../partials/footer') %>
