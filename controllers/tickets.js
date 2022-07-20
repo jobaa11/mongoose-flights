@@ -11,12 +11,13 @@ module.exports = {
 // }
 
 function addToFlight(req, res) {
-    Flight.findById(req.params.id, function(err, flight) {
-        Ticket.find({flight: flight._id}, function(err, tickets) {
-          // Now you can pass both the flight and tickets in the res.render call
-          res.redirect(`/flights/${flight._id}`);
-        });
-    });
+    console.log('addToFlight');
+    // Flight.findById(req.params.id, function(err, flight) {
+    //     Ticket.find({flight: flight._id}, function(err, tickets) {
+    //       // Now you can pass both the flight and tickets in the res.render call
+    //       res.redirect(`/flights/${flight._id}`);
+    //     });
+    // });
     
 };
 

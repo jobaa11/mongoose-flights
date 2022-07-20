@@ -14,8 +14,8 @@ function index(req, res) {
 }
 function show(req, res) {
     Flight.findById(req.params.id, function(err, flight) {
-        console.log(flight, flight._id)
-    res.render('flights/show', { title: 'Flight Detail', flight });
+        console.log(flight, flight._id, 'show')
+    res.render('flights/show', { title: 'Flight Detail', flight});
 });
 }
 
@@ -24,7 +24,6 @@ function newFlight(req, res) {
 }
 
 function create(req, res) {
-    console.log('hello world');
     var flight = new Flight(req.body);
   flight.save(function(err) {
     if (err) return res.redirect('/flights/new');
