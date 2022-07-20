@@ -8,7 +8,7 @@ module.exports = {
 
 function newTicket(req, res) {
     let flightId = req.params.id;
-    res.render('/ticket/new', {flightId})
+    res.render('/ticket/new', { flightId });
 }
 
 
