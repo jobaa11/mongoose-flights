@@ -4,6 +4,6 @@ const destinationsCtrl = require('../controllers/destinations') ;
 
 // Create a Review
 // POST /movies/:id/reviews
-router.post('/:id', destinationsCtrl.create);
+router.post('/flights/:id/destinations', destinationsCtrl.create);
 
 module.exports = router;
