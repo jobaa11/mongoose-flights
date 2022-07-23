@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-destinationSchema = new Schema ({
+const destinationSchema = new Schema ({
   airline: {
     type: String,
     enum: ['Delta', 'United', 'American', 'Southwest'],
